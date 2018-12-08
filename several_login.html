@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16">SELECT YOUR CATEGORY</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="pans">
+    <div class="w3-quarter">
+      <img src="login.jpg" alt="adminlogin" style="width:100%" usemap=#admin>
+      <h3>ADMIN</h3>
+       <map name=admin>
+      <area shape="rect" coords="0,0,516,554" href="adminlogin.php" alt="adminlogin">
+      </map>
+    </div>
+    <div class="w3-quarter">
+      <img src="login.jpg" alt="sm" style="width:100%" usemap=#sm>
+      <h3>STATION MASTER</h3>
+	  <map name=sm>
+      <area shape="rect" coords="0,0,516,554" href="masterlogin.php" alt="sm">
+      </map>
+    </div>
+	<div class="w3-quarter">
+      <img src="login.jpg" alt="user" style="width:100%" usemap=#user>
+      <h3>USER/PASSENGER</h3>
+	  <map name=user>
+      <area shape="rect" coords="0,0,516,554" href="userlogin.php" alt="juser">
+      </map>
+    </div>
+      </div>
+	  </body>
+</html>

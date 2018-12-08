@@ -1,0 +1,36 @@
+<?php
+
+
+$name="root";
+$pas="";
+$dbname="admin";
+$con=mysqli_connect("localhost",$name,$pas);
+
+   
+   if(! $con ) {
+      die('Could not connect: ' );
+   }
+ mysqli_select_db($con,$dbname);
+   $sql = 'SELECT id, name, station, phno, mail FROM masterdetails';
+   
+   $retval = mysqli_query( $con, $sql );
+    
+   if(! $retval ) {
+      die('Could not get data: ' );
+   }
+   
+   while($row = mysqli_fetch_array($retval)) {
+      echo " ID :{$row['id']}  <br> ".
+	    " NAME :{$row['name']}  <br> ".
+         "STATION : {$row['station']} <br> ".
+         "PHONE NUMBER : {$row['phno']} <br> ".
+		 "MAIL : {$row['mail']} <br> ".
+         "--------------------------------<br>";
+   }
+   
+   echo "Fetched data successfully\n";
+   
+   mysqli_close($con);
+
+
+?>
